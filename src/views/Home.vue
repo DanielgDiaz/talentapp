@@ -1,13 +1,10 @@
 <template>
   <div class="home">
-   
-
     <t-form />
   </div>
 </template>
 
 <script>
-
 import TForm from "@/components/TForm.vue";
 
 export default {
@@ -16,7 +13,4 @@ export default {
 };
 </script>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>

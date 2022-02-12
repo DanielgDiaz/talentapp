@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit.prevent="submitForm">
     <label>Email</label>
     <input type="email" required v-model="email" />
 
@@ -32,7 +32,7 @@
   <p>Rol: {{ rol }}</p>
   <p>Description {{ description }}</p>
   <p>Skills: {{ tag }}</p>
-  <p>Country: {{ country }}</p>
+  <p>Country: {{ country.value }}</p>
   <p>City: {{ city }}</p>
 </template>
 
@@ -54,15 +54,12 @@ export default {
     };
   },
   methods: {
-    handleSubmit() {
-      // name validation
-      {
-        console.log("email: ", this.email);
-        console.log("name: ", this.name);
-        console.log("role: ", this.role);
-        console.log("skills: ", this.skills);
-        
-      }
+    submitForm() {
+      console.log("Funciona!");
+    },
+
+    sendForm() {
+      this.$emit("add-user", this.user);
     },
   },
 };

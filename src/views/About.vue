@@ -1,16 +1,17 @@
 <template>
   <div class="about">
-   
- <h1>HOla</h1>
   </div>
+<div>
+
+  <card-user />
+</div>
 </template>
 
 <script>
-
-
+import CardUser from "@/components/CardUser";
 
 export default {
   name: "About",
-  components: { },
+  components: { CardUser },
 };
 </script>
